@@ -6,7 +6,7 @@ module.exports = function (grunt) {
           },
           build: {
               src: 'js/**/*.js',
-              dest: 'package/js/all.min.js'
+              dest: 'package/all.min.js'
           }
       },
       jshint: {
@@ -15,7 +15,7 @@ module.exports = function (grunt) {
       cssmin: {
           target: {
               files: {
-                  'package/css/all.min.css': ['css/*.css']
+                  'package/all.min.css': ['css/*.css']
               }
           }
       },
