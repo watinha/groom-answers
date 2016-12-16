@@ -1,0 +1,19 @@
+{
+  "name": "groom-answers",
+  "version": "0.0.1",
+  "description": "Something useful for future brides, guiding them through marriage frequently asked questions (FAQ). It provides useful and frequent answers from grooms which increase their decision making process.",
+  "main": "index.html",
+  "scripts": {
+    "test": "grunt jasmine"
+  },
+  "author": "Willian Massami Watanabe",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-jasmine": "^1.0.3",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.0.0"
+  }
+}
