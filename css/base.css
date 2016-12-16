@@ -1,0 +1,55 @@
+* {
+    font-family: sans-serif;
+}
+.wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+}
+body {
+    margin 0;
+}
+h1 {
+    text-align: center;
+}
+ul {
+    text-indent: 0;
+    padding: 0;
+}
+ul li {
+    box-shadow: 2px 2px 2px #CCC;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    display: block;
+    padding: 5px;
+    clear: both;
+    min-height: 60px;
+    border-top: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD;
+}
+ul li.bride {
+    background: linear-gradient(#FFFFFF,#FFEEDD);
+}
+ul li.groom {
+    text-align: right;
+    background: linear-gradient(#FFFFFF,#CCDDFF);
+}
+ul li .avatar {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background-size: 50px 50px;
+    margin: 0 5px;
+}
+ul li.bride .avatar {
+    background-image: url(../img/bride.png);
+    float: left;
+}
+ul li.groom .avatar {
+    background-image: url(../img/groom.png);
+    background-size: 50px 70px;
+    float: right;
+}
+textarea {
+    width: 100%;
+    height: 50px;
+}
