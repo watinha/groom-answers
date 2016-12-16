@@ -36,7 +36,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-shell');
 
     grunt.task.registerTask('package', 'generate deploy package...', function () {
-        grunt.config.set('shell.target.command', 'rm -rf package/*; cp index.html package/; cp -rf img/ package/; cat index.html | sed "s/js\/init.js/all.min.js/gi" > package/index.html; cat package/index.html | sed "s/<script.* src=\"js.*//gi"; cat package/index.html | sed "s/css\/base\.css/all.min.css/gi";');
+        grunt.config.set('shell.target.command', 'rm -rf package/*; cp index.html package/; cp -rf img/ package/; cat index.html | sed "s/js\\/init.js/all.min.js/gi" | sed "s/css\\/base\\.css/all.min.css/gi" | sed "s/<script.* src=\\"js\\/.*//gi" > package/index.html; ');
+        //    | sed "s/<script.* src=\\"js\/.*//gi" | sed "s/css\\/base\\.css/all.min.css/gi" > package/index.html;');
         grunt.task.run(['shell', 'uglify', 'cssmin']);
     });
 };
