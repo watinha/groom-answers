@@ -4,6 +4,7 @@
 .wrapper {
     max-width: 480px;
     margin: 0 auto;
+    position: relative;
 }
 body {
     margin 0;
@@ -52,4 +53,10 @@ ul li.groom .avatar {
 textarea {
     width: 100%;
     height: 50px;
+}
+p {
+    font-style: italic;
+    text-align: right;
+    width: 70%;
+    margin-left: 30%;
 }
