@@ -1,5 +1,5 @@
 (function (window) {
-    'strict'
+    'strict';
     window.GroomBot = (function () {
         return {};
     });
