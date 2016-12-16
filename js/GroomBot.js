@@ -9,7 +9,8 @@
                 seed = s;
             },
             answer: function () {
-                return prologue[seed()] + nothingness[seed()];
+                console.log(seed());
+                return prologue[seed() % prologue.length] + nothingness[seed() % nothingness.length];
             }
         };
     });

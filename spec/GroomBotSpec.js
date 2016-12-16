@@ -19,4 +19,18 @@ describe('GroomBot should be a gentle and concise messeger', function () {
         });
         expect(g.answer()).toBe('25');
     });
+    it('should not generate exceptions', function () {
+        var g = GroomBot(['1', '2', '3', '4'], [4, 5, 6]);
+        g.seed(function () {
+            return 9;
+        });
+        expect(g.answer()).toBe('24');
+    });
+    it('should not generate exceptions again', function () {
+        var g = GroomBot(['1', '2', '3', '4'], [4, 5, 6]);
+        g.seed(function () {
+            return 7;
+        });
+        expect(g.answer()).toBe('45');
+    });
 });
