@@ -7,7 +7,7 @@ module.exports = function (grunt) {
           },
           build: {
               src: 'js/**/*.js',
-              dest: 'package/all.min.js'
+              dest: 'package/js/all.min.js'
           }
       },
       jshint: {
@@ -16,7 +16,7 @@ module.exports = function (grunt) {
       cssmin: {
           target: {
               files: {
-                  'package/all.min.css': ['css/*.css']
+                  'package/css/all.min.css': ['css/*.css']
               }
           }
       },
@@ -36,7 +36,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-shell');
 
     grunt.task.registerTask('package', 'generate deploy package...', function () {
-        grunt.config.set('shell.target.command', 'rm -rf package/*; cp index.html package/; cp -rf img/ package/; cat index.html | sed "s/js\\/init.js/all.min.js/gi" | sed "s/css\\/base\\.css/all.min.css/gi" | sed "s/<script.* src=\\"js\\/.*//gi" > package/index.html; ');
+        grunt.config.set('shell.target.command', 'rm -rf package/*; cp index.html package/; cp -rf img/ package/; cat index.html | sed "s/js\\/init.js/js\\/all.min.js/gi" | sed "s/css\\/base\\.css/css\\/all.min.css/gi" | sed "s/<script.* src=\\"js\\/G.*//gi" > package/index.html; ');
         grunt.task.run(['shell', 'uglify', 'cssmin']);
     });
 };
