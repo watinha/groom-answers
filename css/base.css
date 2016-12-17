@@ -23,9 +23,11 @@ ul li {
     display: block;
     padding: 5px;
     clear: both;
-    min-height: 60px;
     border-top: 1px solid #DDDDDD;
     border-left: 1px solid #DDDDDD;
+    transition: all linear 1s;
+    overflow: hidden;
+    opacity: 1;
 }
 ul li.bride {
     background: linear-gradient(#FFFFFF,#FFEEDD);
@@ -49,6 +51,11 @@ ul li.groom .avatar {
     background-image: url(../img/groom.png);
     background-size: 50px 70px;
     float: right;
+}
+ul li.groom.hidden,
+ul li.bride.hidden {
+    transform: scale(0) translateY(-100px);
+    opacity: 0;
 }
 textarea {
     width: 100%;
